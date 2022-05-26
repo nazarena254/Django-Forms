@@ -12,16 +12,16 @@ def news_today(request):
     news = Article.todays_news()
     return render(request, 'all-news/today-news.html', {"date": date,"news":news})
 
-def convert_dates(dates):
+# def convert_dates(dates):
 
-    # Function that gets the weekday number for the date.
-    day_number = dt.date.weekday(dates)
+#     # Function that gets the weekday number for the date.
+#     day_number = dt.date.weekday(dates)
 
-    days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
+#     days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
 
-    # Returning the actual day of the week
-    day = days[day_number]
-    return day
+#     # Returning the actual day of the week
+#     day = days[day_number]
+#     return day
 
 def past_days_news(request, past_date):
     try:
