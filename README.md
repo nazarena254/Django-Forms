@@ -55,5 +55,5 @@ For any further inquiries, bugs, contributions or comments, reach me at:<br>
 Email:<nancyngunjiri1@gmail.com>
 
 ### License
-[MIT License](https://github.com/nazarena254/The-Tribune/blob/master/license)
+[MIT License](https://github.com/nazarena254/The-Tribune/blob/master1/LICENSE)
 Copyright (c) 2021 **Nazarena Wambura**
