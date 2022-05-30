@@ -6,7 +6,6 @@ import datetime as dt
 
 class EditorTestClass(TestCase):
     #setup method
-
     def setUp(self):
         self.lynne=Editor(first_name='Lynne',last_name='Genchabe', email='lynne2moringaschool.com')
 
