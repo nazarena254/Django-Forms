@@ -1,4 +1,6 @@
-{%extends 'all-news/base.html'%} {% block content %} {{ block.super}}
+{%extends 'all-news/base.html'%} 
+{% block content %}
+{{ block.super}}
 
 <div class="container" style="font-family: 'Acme', sans-serif;">
     <!-- Looping through news   -->
@@ -9,15 +11,12 @@
         <div class="col-md-4">
             <h2 class="text-center"> {{ news_item.title }} </h2>
         </div>
-
         <!--Display news Article images  -->
         {% if news_item.article_image %}
         <div class="col-md-5">
             <img src="{{news_item.article_image.url}}" class="img-responsive" alt="Image" style="height: 90%; width: 50%;">
         </div>
         {% endif %}
-
-
     </div>
 
     {% empty %}
@@ -26,9 +25,9 @@
     </div>
     {% endfor %}
 
+    <div class="container">
 
-
+    </div>
 
 </div>
-
 {% endblock %}
