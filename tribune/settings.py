@@ -17,6 +17,7 @@ import dj_database_url
 from decouple import config,Csv
 
 
+#Python-decouple allows us connect the environment variables to our Django
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -27,21 +28,12 @@ SECRET_KEY = 'django-insecure-$2y@+vqe5xl+h911@b^h7-4)fo&pzpg+2bc-ai!d1as)l&!ly9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
-
-
-
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
-
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -99,6 +91,13 @@ DATABASES = {
     }
 }
 
+# Email configurations remember to install python-decouple
+# We use the config function to connect to the environment variables
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
