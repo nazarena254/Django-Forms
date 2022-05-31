@@ -17,7 +17,7 @@ def news_today(request):
             print("valid form")
     else:
         form = NewsLetterForm()        
-    return render(request, 'all-news/today-news.html', {"date": date,"news":news,"letterform":form})
+    return render(request, 'all-news/today-news.html', {"date": date,"news":news,"letterForm":form})
 
 
 
