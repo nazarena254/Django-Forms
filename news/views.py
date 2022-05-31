@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 import datetime as dt
 from .models import Article
+from .forms import NewsLetterForm
 
 # Create your views here.
 def welcome(request):
@@ -10,18 +11,15 @@ def welcome(request):
 def news_today(request):
     date = dt.date.today()
     news = Article.todays_news()
-    return render(request, 'all-news/today-news.html', {"date": date,"news":news})
+    if request.method == 'POST':
+        form=NewsLetterForm(request.POST)
+        if form.is_valid():
+            print("valid form")
+    else:
+        form = NewsLetterForm()        
+    return render(request, 'all-news/today-news.html', {"date": date,"news":news,"letterform":form})
 
-# def convert_dates(dates):
 
-#     # Function that gets the weekday number for the date.
-#     day_number = dt.date.weekday(dates)
-
-#     days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
-
-#     # Returning the actual day of the week
-#     day = days[day_number]
-#     return day
 
 def past_days_news(request, past_date):
     try:
