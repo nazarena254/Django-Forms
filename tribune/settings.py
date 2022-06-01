@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'bootstrap4',
     'registration',
+    'tinymce'
     
 ]
 
