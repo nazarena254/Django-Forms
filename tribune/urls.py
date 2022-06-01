@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 #django.conf.urls.url() was deprecated in Django 3.0, and is removed in Django 4.0+.
-#The easiest fix is to replace url() with re_path() & import it from django.urls
+#The easiest fix is to replace url() with re_path() or path() & import it from django.urls
 
 from django.contrib import admin
 from django.urls import re_path, include
@@ -30,7 +30,7 @@ urlpatterns = [
 
     #django-registration provides the registration form and requires templates 
     # to be stored in a template subfolder called registration
-    # re_path(r'^accounts/', include('registration.backends.simple.urls')),
+    re_path(r'^accounts/', include('registration.backends.simple.urls')),
 
     # url(r'^admin/', admin.site.urls),
     # url(r'', include('news.urls')),
