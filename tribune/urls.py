@@ -22,6 +22,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('news.urls')),
+    #django-registration provides the registration form and requires templates 
+    # to be stored in a template subfolder called registration
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
 
 if settings.DEBUG:
