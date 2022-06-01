@@ -18,6 +18,7 @@ Including another URLconf
 # The easiest fix is to replace url() with re_path() or path() & import it from django.urls
 # path() requires no regular expression unlike re_path()
 from django.contrib import admin
+from django.contrib.auth import views
 from django.urls import re_path,path, include
 # from django.conf.urls import url, include
 
@@ -32,10 +33,9 @@ urlpatterns = [
     # to be stored in a template subfolder called registration
     path('accounts/', include('registration.backends.simple.urls')),
 
-    # url(r'^admin/', admin.site.urls),
-    # url(r'', include('news.urls')),
-    # path(r'admin/', admin.site.urls),
-    # path(r'', include('news.urls')),
+    # next_page defines the page to go to after the user is logged out
+    path('logout/',views.logout, {"next_page":'/'}), 
+
 ]
 
 if settings.DEBUG:
