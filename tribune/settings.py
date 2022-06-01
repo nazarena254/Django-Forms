@@ -22,9 +22,6 @@ from decouple import config,Csv
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$2y@+vqe5xl+h911@b^h7-4)fo&pzpg+2bc-ai!d1as)l&!ly9'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -78,6 +75,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tribune.wsgi.application'
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = config('SECRET_KEY')
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

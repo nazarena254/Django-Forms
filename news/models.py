@@ -50,5 +50,5 @@ class Article(models.Model):
 
 class NewsLetterRecipients(models.Model):
     name=models.CharField(max_length = 30)
-    lastname= models.CharField(max_length=40)
+    lastname= models.CharField(max_length=40,null=True)
     email=models.EmailField()

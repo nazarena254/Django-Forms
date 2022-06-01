@@ -7,15 +7,15 @@ import datetime as dt
 class EditorTestClass(TestCase):
     #setup method
     def setUp(self):
-        self.lynne=Editor(first_name='Lynne',last_name='Genchabe', email='lynne2moringaschool.com')
+        self.naz=Editor(first_name='Naz',last_name='Wambura', email='mnazwamburi@gmail.com')
 
     #testing instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.lynne,Editor))
+        self.assertTrue(isinstance(self.naz,Editor))
 
      # Testing Save Method
     def test_save_method(self):
-        self.lynne.save_editor()
+        self.naz.save_editor()
         editors = Editor.objects.all()
         self.assertTrue(len(editors) > 0)
 

@@ -1,3 +1,3 @@
-Hello {{name}} {{lastname}}
+Hello {{name}} 
 
 Welcome to the NazArticles newsletter You will find the most exciting news about  articles
