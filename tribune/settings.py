@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
     'bootstrap4',
-    'reqistration',
+    'registration',
     
 ]
 
