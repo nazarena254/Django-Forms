@@ -4,8 +4,8 @@
 Nazarena Wambura.</br>
 [Github](https://github.com/nazarena254)
 
-### Homepage
-<!-- ![nazzblog](./news/static/images/tribune.png) -->
+### TribuneArticles page
+![nazzblog](./news/static/images/nazarticles.png)
 
 
 ## Description

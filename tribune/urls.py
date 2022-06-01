@@ -14,17 +14,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+#django.conf.urls.url() was deprecated in Django 3.0, and is removed in Django 4.0+.
+#The easiest fix is to replace url() with re_path() & import it from django.urls
+
 from django.contrib import admin
-from django.conf.urls import url,include
+from django.urls import re_path, include
+# from django.conf.urls import url, include
+
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'', include('news.urls')),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'', include('news.urls')),
+
     #django-registration provides the registration form and requires templates 
     # to be stored in a template subfolder called registration
-    url(r'^accounts/', include('registration.backends.simple.urls')),
+    # re_path(r'^accounts/', include('registration.backends.simple.urls')),
+
+    # url(r'^admin/', admin.site.urls),
+    # url(r'', include('news.urls')),
+    # path(r'admin/', admin.site.urls),
+    # path(r'', include('news.urls')),
+    #django-registration provides the registration form and requires templates 
+    # to be stored in a template subfolder called registration
+    # url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
 
 if settings.DEBUG:
