@@ -28,6 +28,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('news.urls')),
+    path('tinymce/', include('tinymce.urls')), # it is rich text editor for users to write posts
 
     #django-registration provides the registration form and requires templates 
     # to be stored in a template subfolder called registration
