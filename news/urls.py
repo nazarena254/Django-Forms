@@ -7,6 +7,6 @@ urlpatterns=[
     path('',views.news_today,name='newsToday'),
     path('archives/',views.past_days_news,name = 'pastNews'),
     path('search/', views.search_results, name='search_results'),
-    path('new/article/',views.new_article,name ='new_article')   
+    path('new/article/',views.new_article,name ='new-article')   
      
 ]
