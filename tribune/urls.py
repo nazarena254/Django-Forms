@@ -33,8 +33,7 @@ urlpatterns = [
     #django-registration provides the registration form and requires templates 
     # to be stored in a template subfolder called registration
     path('accounts/', include('django.contrib.auth.urls')),
-    # path('accounts/', include('registration.backends.simple.urls')),
-
+    # path('accounts/', include('django.contrib.auth.urls')),
 
     # next_page defines the page to go to after the user is logged out
     # path('logout/',views.logout, {"next_page":'/'}), 
