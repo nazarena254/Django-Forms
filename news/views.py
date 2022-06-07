@@ -7,7 +7,6 @@ from .email import send_welcome_email
 from .models import Article,NewsLetterRecipients
 from .forms import NewsLetterForm, NewArticleForm
 
-
 # Create your views here.
 def welcome(request):
     return render(request,'welcome.html')
