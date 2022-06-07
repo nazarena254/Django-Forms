@@ -35,6 +35,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     # path('accounts/', include('registration.backends.simple.urls')),
 
+
     # next_page defines the page to go to after the user is logged out
     # path('logout/',views.logout, {"next_page":'/'}), 
 
